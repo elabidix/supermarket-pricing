@@ -139,14 +139,5 @@ public class TDDTest {
         );
         System.out.println(footer);
 
-
-
-
-
     }
-
-
-
-
-
 }
