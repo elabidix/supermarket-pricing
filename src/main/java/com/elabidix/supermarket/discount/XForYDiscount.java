@@ -2,8 +2,8 @@ package com.elabidix.supermarket.discount;
 
 public class XForYDiscount implements Discount {
 
-    private double amount ;
-    private double amountPrice ;
+    private double amount;
+    private double amountPrice;
 
     public XForYDiscount(double amount, double amountPrice) {
         this.amount = amount;
@@ -29,7 +29,7 @@ public class XForYDiscount implements Discount {
 
     @Override
     public String toString() {
-        StringBuffer str = new StringBuffer() ;
+        StringBuffer str = new StringBuffer();
         str.append((int) amount)
                 .append(" for ")
                 .append(amountPrice)

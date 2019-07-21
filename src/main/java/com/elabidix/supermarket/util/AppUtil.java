@@ -4,8 +4,8 @@ import java.text.DecimalFormat;
 
 public final class AppUtil {
 
-    public static double round(double d){
+    public static double round(double d) {
         DecimalFormat f = new DecimalFormat("##.00");
-        return Double.parseDouble(f.format(d).replaceAll(",",".")) ;
+        return Double.parseDouble(f.format(d).replaceAll(",", "."));
     }
 }

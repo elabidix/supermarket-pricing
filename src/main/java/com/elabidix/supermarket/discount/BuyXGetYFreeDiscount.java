@@ -3,7 +3,7 @@ package com.elabidix.supermarket.discount;
 public class BuyXGetYFreeDiscount implements Discount {
 
     private int costProduct;
-    private int freeProduct ;
+    private int freeProduct;
 
     public BuyXGetYFreeDiscount(int costProduct, int freeProduct) {
         this.costProduct = costProduct;
@@ -34,17 +34,17 @@ public class BuyXGetYFreeDiscount implements Discount {
         return freeProduct;
     }
 
-    public int getTotalProductDiscount(){
-        return freeProduct + costProduct ;
+    public int getTotalProductDiscount() {
+        return freeProduct + costProduct;
     }
 
-    public double getTotalProductAsDouble(){
-        return (double) (freeProduct + costProduct) ;
+    public double getTotalProductAsDouble() {
+        return (double) (freeProduct + costProduct);
     }
 
-    public double getPercentageDiscount(){
+    public double getPercentageDiscount() {
 
-        return (1 - getFreeProductAsDouble() / getTotalProductAsDouble() ) ;
+        return (1 - getFreeProductAsDouble() / getTotalProductAsDouble());
     }
 
     @Override

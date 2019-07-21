@@ -1,13 +1,11 @@
 package com.elabidix.supermarket.product;
 
 
-import com.elabidix.supermarket.util.AppUtil;
-
 public abstract class Product {
 
     private String code;
-    private String name ;
-    private double price ;
+    private String name;
+    private double price;
 
     public double getPrice() {
         return price;
@@ -34,12 +32,4 @@ public abstract class Product {
     }
 
 
-    public static void main(String[] args) {
-
-
-        double d = 2.34568;
-        double d1 = 1.199;
-
-        System.out.println(AppUtil.round(d));
-    }
 }

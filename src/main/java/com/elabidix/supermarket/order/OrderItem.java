@@ -17,13 +17,12 @@ public final class OrderItem {
     private Pricing pricing;
 
 
-    public double getTotalOrderItem() throws Exception {
-        return this.pricing.doPricing(this);
-    }
-
-
     public OrderItem(Pricing pricing) {
         this.pricing = pricing;
+    }
+
+    public double getTotalOrderItem() throws Exception {
+        return this.pricing.doPricing(this);
     }
 
     public WeightUnit getWeightUnit() {

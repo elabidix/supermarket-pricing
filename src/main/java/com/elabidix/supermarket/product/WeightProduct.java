@@ -4,7 +4,7 @@ import com.elabidix.supermarket.util.WeightUnit;
 
 public class WeightProduct extends Product {
 
-    private WeightUnit weightUnit ;
+    private WeightUnit weightUnit;
 
     public WeightUnit getWeightUnit() {
         return weightUnit;

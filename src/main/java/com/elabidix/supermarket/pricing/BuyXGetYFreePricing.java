@@ -10,22 +10,22 @@ public class BuyXGetYFreePricing implements Pricing {
     @Override
     public double doPricing(OrderItem orderItem) throws Exception {
 
-        BuyXGetYFreeDiscount discount = (BuyXGetYFreeDiscount) orderItem.getDiscount() ;
-        int orderAmount = (int) orderItem.getAmount() ;
+        BuyXGetYFreeDiscount discount = (BuyXGetYFreeDiscount) orderItem.getDiscount();
+        int orderAmount = (int) orderItem.getAmount();
 
-        if(orderAmount < discount.getTotalProductDiscount() ) {
-            throw new DiscountException("To benifit from this count, you should take more then "+ discount.getTotalProductDiscount() +" items") ;
+        if (orderAmount < discount.getTotalProductDiscount()) {
+            throw new DiscountException("To benifit from this count, you should take more then " + discount.getTotalProductDiscount() + " items");
         }
 
-        double price = orderItem.getProduct().getPrice() ;
-        double discountPrice = price * discount.getPercentageDiscount() ;
+        double price = orderItem.getProduct().getPrice();
+        double discountPrice = price * discount.getPercentageDiscount();
 
 
-        int discountedItems = (orderAmount / discount.getTotalProductDiscount()) *  discount.getTotalProductDiscount()   ;
-        int noDiscountedItems = orderAmount - discountedItems ;
+        int discountedItems = (orderAmount / discount.getTotalProductDiscount()) * discount.getTotalProductDiscount();
+        int noDiscountedItems = orderAmount - discountedItems;
 
 
-        return AppUtil.round( discountedItems * discountPrice   + noDiscountedItems * price );
+        return AppUtil.round(discountedItems * discountPrice + noDiscountedItems * price);
     }
 
 }

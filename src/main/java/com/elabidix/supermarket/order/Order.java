@@ -5,8 +5,7 @@ import java.util.List;
 
 public class Order {
 
-    private List<OrderItem> orderItems = new ArrayList<OrderItem>() ;
-
+    private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
     public List<OrderItem> getOrderItems() {
         return orderItems;
@@ -16,17 +15,17 @@ public class Order {
         this.orderItems.add(orderItem);
     }
 
-    public double getTotalOrder(){
+    public double getTotalOrder() {
         return orderItems
                 .stream()
                 .mapToDouble(orderItem -> {
                     try {
                         return orderItem.getTotalOrderItem();
                     } catch (Exception e) {
-                        throw new RuntimeException(e.getMessage()) ;
+                        throw new RuntimeException(e.getMessage());
                     }
                 })
-                .sum() ;
+                .sum();
     }
 
 }
