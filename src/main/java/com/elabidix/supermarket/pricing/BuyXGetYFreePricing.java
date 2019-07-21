@@ -14,7 +14,7 @@ public class BuyXGetYFreePricing implements Pricing {
         int orderAmount = (int) orderItem.getAmount();
 
         if (orderAmount < discount.getTotalProductDiscount()) {
-            throw new DiscountException("To benifit from this count, you should take more then " + discount.getTotalProductDiscount() + " items");
+            throw new DiscountException("To benifit from this discount, you should take more then " + discount.getTotalProductDiscount() + " items");
         }
 
         double price = orderItem.getProduct().getPrice();
